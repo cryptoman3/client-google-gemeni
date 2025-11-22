@@ -18,6 +18,7 @@ final class ImageConfig implements Arrayable
      */
     public function __construct(
         public readonly string $aspectRatio,
+        public readonly string $imageSize,
     ) {}
 
     /**
@@ -27,6 +28,7 @@ final class ImageConfig implements Arrayable
     {
         return new self(
             aspectRatio: $attributes['aspectRatio'],
+            imageSize: $attributes['imageSize'],
         );
     }
 
@@ -34,6 +36,7 @@ final class ImageConfig implements Arrayable
     {
         return [
             'aspectRatio' => $this->aspectRatio,
+            'imageSize' => $this->imageSize,
         ];
     }
 }
