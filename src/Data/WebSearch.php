@@ -1,30 +1,29 @@
- <?php                                                                                                                                                                                                                                                                                                                     
-                                                            
-  declare(strict_types=1);
+<?php
 
-  namespace Gemini\Data;
+declare(strict_types=1);
 
-  use Gemini\Contracts\Arrayable;
-  use stdClass;
+namespace Gemini\Data;
 
-  /**
-   * Web search tool type.
-   *
-   * https://ai.google.dev/api/caching#WebSearch
-   */
-  final class WebSearch implements Arrayable
-  {
-      public function __construct()
-      {
-      }
+use stdClass;
 
-      public static function from(): self
-      {
-          return new self;
-      }
+/**
+ * Web search tool type.
+ *
+ * https://ai.google.dev/api/caching#WebSearch
+ */
+final class WebSearch
+{
+    public function __construct()
+    {
+    }
 
-      public function toArray(): stdClass
-      {
-          return new stdClass;
-      }
-  }
+    public static function from(): self
+    {
+        return new self;
+    }
+
+    public function toArray(): stdClass
+    {
+        return new stdClass;
+    }
+}
